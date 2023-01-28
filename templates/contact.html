@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link href ="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet">
+    <!-- font-awesome link to link the icons in webpage,  https://fontawesome.com/icons , visited last on 27/01/2023 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- end of font-awesome link -->
+</head>
+<body class ="main-content">
+    <main class="active">
+        <section class="section">
+            <div class="contact-cntr">
+                <div class="main-title">
+                    <h2>Contact <span>Me</span></h2>
+                </div>
+                <div class="contacts-content">
+                    <div class="left-contact">
+                        <h4>Contact me here</h4>
+                            <div>
+                                <div class="icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Location 
+                                </div>
+                                <p>
+                                    :Cardiff, United Kingdom
+                                </p>
+                            </div>
+                            <div>
+                                <div class="icon">
+                                    <i class="fas fa-mobile"></i>
+                                    Mobile Number
+                                </div>
+                                <p>
+                                    :07799031835
+                                </p>
+                            </div>
+                            <div>
+                                <div class="icon">
+                                    <i class="fas fa-envelope"></i>
+                                    Email
+                                </div>
+                                <p>
+                                    :akhilavplr3@gmail.com
+                                </p>
+                            </div>
+                            <div>
+                                <div class="icon">
+                                    <i class="fas fa-language"></i>
+                                    Languages 
+                                </div>
+                                <p>
+                                    :English, Malayalam, Hindi
+                                </p>
+                            </div>
+                        <div class = "social-cntr">
+                            <a class="socials"href="https://www.linkedin.com/in/akhila-v-0054aa185/" target="_blank"><img src="{{ url_for('static', filename='img/linkedin.png') }}"></a>
+                            <a class="socials" href="mailto:akhilavplr3@gmail.com" target="_blank"><img src="{{ url_for('static', filename='img/email.png') }}" ></a>
+                            <a class="socials" href="https://github.com/Akhilav03?tab=repositories" target="_blank"><img src="{{ url_for('static', filename='img/github.png') }}" ></a>
+                        </div>
+                    </div>
+                    <div class="right-contact">
+                        <h3>Wanna see the little messages left out by our visitors??</h3>
+                        <h5>Leave a message for our future visitors too!!!</h5>
+
+                        <form method="POST" action="/dashboard">
+                            <div class="input-cntrl">
+                                {{ form.hidden_tag() }}
+                                {{ form.name.label }}
+                                {{ form.name() }}<br/>
+                                {{ form.message.label }}
+                                {{ form.message() }}<br/>
+                            </div>
+                            <div class="submit-btn">
+                                {{ form.submit() }} 
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="controlls">
+        <div >
+            <a href="/"><i class="fa fa-home"></i></a>
+        </div>
+        <div >
+            <a href="about"><i class="fa fa-user"></i></a>
+        </div>
+        <div > 
+            <a href="edu"><i class="fa fa-book"></i></a>
+        </div>
+        <div >
+            <a href="exp"><i class="fa fa-briefcase"></i></a>
+        </div>
+        <div >
+            <a href="wrk"><i class="fa fa-laptop"></i></a>
+        </div>
+        <div >
+            <a href="contact"><i class="fa fa-envelope"></i></a>
+        </div>
+    </div>
+</body>
+</html>

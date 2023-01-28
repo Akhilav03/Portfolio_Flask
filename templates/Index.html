@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Porfolio</title>
+    <link href ="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet">
+    <!-- font-awesome link to link the icons in webpage,  https://fontawesome.com/icons , visited last on 27/01/2023 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- end of font-awesome link -->
+
+</head>    
+<body class ="main-content">
+    <header class="section header active" id ="home">
+        <div class="header-content">
+            <div class="left-header">
+                <div class="h-shape"></div>
+                <div class="image">
+                    <img src="{{ url_for('static', filename='img/me.jpeg') }}" alt="" >
+                </div>
+            </div>
+            <div class="right-header">
+                <h1 class="name">
+                    Hi, I'm <span class="name">Akhila Vanaja Anand</span>
+                </h1>
+                <p>
+                    Hello, My name is Akhila, I'm a MSc computing student from Cardiff University. This is my portfolio, please feel free to go through my CV also, Thank you!
+                </p>
+                <div class="btn-contr">
+                    <a href="{{ url_for('static', filename='CV.pdf') }}" download="CV" class="main-btn">
+                        <span class="btn-text">Download CV</span> 
+                        <span class="btn-icon"><i class="fa fa-download"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="controlls" >
+        <div>
+            <a  href="/"><i class="fa fa-home"></i></a> 
+        </div>>
+        <div>
+            <a href="about"><i class="fa fa-user"></i></a> 
+        </div>
+        <div> 
+            <a href="edu"><i class="fa fa-book"></i></a> 
+        </div>
+        <div>
+            <a href="exp"><i class="fa fa-briefcase"></i></a> 
+        </div>
+        <div>
+            <a href="wrk"><i class="fa fa-laptop"></i></a> 
+        </div>
+        <div>
+            <a href="contact"><i class="fa fa-envelope"></i></a> 
+        </div>
+    </div>
+</body>
+</html>

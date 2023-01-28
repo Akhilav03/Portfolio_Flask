@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasboard</title>
+    <link href ="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet">
+    <!-- font-awesome link to link the icons in webpage,  https://fontawesome.com/icons , visited last on 27/01/2023 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- end of font awesome link -->
+</head>
+<body class ="main-content">
+
+    <section class="sec-msg">
+        {% if name %}
+            <h1>Here is some of the little messages for you!!</h1><br/><br/>
+            <div class="tbl">
+                {% for  our_user in our_users %}
+                   <h4>* {{ our_user.message }} : by - <span class="name-span">{{ our_user.name }}</span><br/></h4>
+                    
+                    {% endfor %}
+            </div>
+        {% endif %}
+    </section>
+    <div class="controlls">
+        <div>
+            <a href="/"><i class="fa fa-home"></i></a>
+        </div>
+        <div >
+            <a href="about"><i class="fa fa-user"></i></a>
+        </div>
+        <div > 
+            <a href="edu"><i class="fa fa-book"></i></a>
+        </div>
+        <div >
+            <a href="exp"><i class="fa fa-briefcase"></i></a>
+        </div>
+        <div >
+            <a href="wrk"><i class="fa fa-laptop"></i></a>
+        </div>
+        <div >
+            <a href="contact"><i class="fa fa-envelope"></i></a>
+        </div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Works</title>
+    <link href ="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet">
+    <!-- font-awesome link to link the icons in webpage,  https://fontawesome.com/icons , visited last on 27/01/2023 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- end of font-awesome link -->
+</head>
+<body class ="main-content">
+    <main class="active">
+        <section class="section">
+            <div class="main-title">
+                <h2>My <span>Projects</span></h2>
+            </div>
+            <p class="proj-text">
+                Here is some of my major works that I've done in various programming languages.
+            </p>
+            <div class="works"> 
+                <div class="wrk-items">
+                    <div class="image">
+                        <img src="{{ url_for('static', filename='img/candy-crush.png') }}" alt="Candy_Crush Game">
+                        <div class="hover-items">
+                            <a href="https://github.com/Akhilav03/Projects/tree/main/JavaScript/CandyCrush" target="_blank"> <h3>Project Source Code</h3></a>
+                        </div>
+                        <p>Candy Crush Game </p>
+                    </div>
+                    <div class="image">
+                        <img src="{{ url_for('static', filename='img/book.png') }}" alt="Novelist_website">
+                        <div class="hover-items">
+                            <a href="https://github.com/Akhilav03/Projects/tree/main/JavaScript/Novelist" target="_blank"> <h3>Project Source Code</h3></a>
+                        </div>
+                        <p> Novelist Website</p>
+                    </div>
+                </div>
+                <div class="wrk-items">
+                    <div class="image">
+                        <img src="{{ url_for('static', filename='img/zomato.png') }}" alt="Zomato_clone">
+                        <div class="hover-items">
+                            <a href="https://github.com/Akhilav03/Zomato_Prjt" target="_blank"> <h3>Project Source Code</h3></a>
+                        </div>
+                        <p> Zomato Clone App</p>
+                    </div>
+                    <div class="image">
+                        <img src="{{ url_for('static', filename='img/netflix.png') }}" alt="Zomato_clone">
+                        <div class="hover-items">
+                            <a href="https://github.com/Akhilav03/Netflix-_Clone" target="_blank"> <h3>Project Source Code</h3></a>
+                        </div>
+                        <p> Netflix Clone App</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="controlls">
+        <div>
+            <a href="/"><i class="fa fa-home"></i></a>
+        </div>
+        <div >
+            <a href="about"><i class="fa fa-user"></i></a>
+        </div>
+        <div > 
+            <a href="edu"><i class="fa fa-book"></i></a> 
+        </div>
+        <div >
+            <a href="exp"><i class="fa fa-briefcase"></i></a>
+        </div>
+        <div >
+            <a href="wrk"><i class="fa fa-laptop"></i></a>
+        </div>
+        <div >
+            <a href="contact"><i class="fa fa-envelope"></i></a>
+        </div>
+    </div>
+</body>
+</html>
