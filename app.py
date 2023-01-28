@@ -1,3 +1,4 @@
+from blog import app as application
 from flask import Flask, render_template, flash
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, TextAreaField
