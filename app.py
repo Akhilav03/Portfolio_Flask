@@ -12,8 +12,7 @@ app = Flask(__name__)
 
 
 #Add Database
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://c22051675:Hestia@300@csmysql.cs.cf.ac.uk:3306/c22051675_users'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 
 #secret key
 import os
