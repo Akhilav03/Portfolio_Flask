@@ -2,7 +2,6 @@ from flask import Flask, render_template, flash
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, TextAreaField
 from wtforms.validators import DataRequired
-from wtforms.widgets import TextArea
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
@@ -13,7 +12,8 @@ app = Flask(__name__)
 
 
 #Add Database
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://c22051675:Hestia@300@csmysql.cs.cf.ac.uk:3306/c22051675_users'
 
 #secret key
 import os
