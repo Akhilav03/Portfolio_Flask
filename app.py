@@ -4,7 +4,6 @@ from wtforms import StringField, SubmitField, TextAreaField
 from wtforms.validators import DataRequired
 from wtforms.widgets import TextArea
 from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
 from datetime import datetime
 
 
@@ -23,7 +22,6 @@ app.config['SECRET_KEY'] = SECRET_KEY
 
 
 db = SQLAlchemy(app)
-migrate = Migrate(app, db, render_as_batch=True)
 
 
 
